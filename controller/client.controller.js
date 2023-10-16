@@ -1,5 +1,5 @@
 import { clientServices } from "../service/client_service.js";
-const crearNuevaLinea=(nombre,email)=>{
+const crearNuevaLinea=(nombre,email,id)=>{
     const filaTabla= document.createElement('tr');
     const contenido=`
     <td class="td" data-td>
@@ -10,7 +10,7 @@ const crearNuevaLinea=(nombre,email)=>{
       <ul class="table__button-control">
         <li>
           <a
-            href="../screens/editar_cliente.html"
+            href="../screens/editar_cliente.html?id=${id}"
             class="simple-button simple-button--edit"
             >Editar</a
           >
@@ -18,7 +18,7 @@ const crearNuevaLinea=(nombre,email)=>{
         <li>
           <button
             class="simple-button simple-button--delete"
-            type="button"
+            type="button" id="${id}"
           >
             Eliminar
           </button>
@@ -26,7 +26,15 @@ const crearNuevaLinea=(nombre,email)=>{
       </ul>
     </td>`;
     filaTabla.innerHTML =contenido;
-    return  filaTabla 
+    const btnEliminar= filaTabla.querySelector("button")
+    btnEliminar.addEventListener("click",()=>{
+        const id=btnEliminar.id;//parametro de boton
+        clientServices.eliminarClient(id).then(respuesta=>{
+          alert(respuesta)
+        }).catch(error=>alert("error",error))
+    });
+
+    return  filaTabla;
 };
 
 const tabla=document.querySelector('[data-table]')
