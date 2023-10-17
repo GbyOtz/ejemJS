@@ -1,16 +1,16 @@
-import { clientServices } from "../service/client_service.js";
-const crearNuevaLinea=(nombre,email,id)=>{
+import { productoServices } from "../service/producto_service.js";
+const crearNuevaLinea=(nombre,precio,descripcion,id)=>{
     const filaTabla= document.createElement('tr');
-    const contenido=`
+    const contenido=` 
     <td class="td" data-td>
-    ${nombre}
-    </td>
-    <td> ${email} </td>
+    ${nombre}</td>
+    <td> ${precio} </td>
+    <td> ${descripcion} </td>
     <td>
       <ul class="table__button-control">
         <li>
           <a
-            href="../screens/editar_cliente.html?id=${id}"
+            href="../screens/editar_producto.html?id=${id}"
             class="simple-button simple-button--edit"
             >Editar</a
           >
@@ -43,11 +43,11 @@ const tabla=document.querySelector('[data-table]')
 //read-get
 //update-put y patch
 //delete-delete
-clientServices
-.listaClient()
+productoServices
+.listaProducto()
   .then((data)=>{
-      data.forEach((perfil) => {
-            const nuevaLinea=crearNuevaLinea(perfil.nombre,perfil.email, perfil.id);
+      data.forEach((perfil2) => {
+            const nuevaLinea=crearNuevaLinea(perfil2.nombre,perfil2.precio, perfil2.descripcion, perfil2.id);
             tabla.appendChild(nuevaLinea);
       });
   })

@@ -1,6 +1,6 @@
-import { clientServices } from "../service/client_service";
+import { clientServices } from "../service/client_service.js";
 
-const formulario=document.querySelector('[data-form]');
+const formulario=document.querySelector("[data-form]");
 formulario.addEventListener("submit",(evento)=>{
     evento.preventDefault();//sirve para que el evento no actue por si solo o todo este mas controlado
     const nombre= document.querySelector("[data-nombre]").value;
@@ -10,5 +10,5 @@ formulario.addEventListener("submit",(evento)=>{
         .then(()=>{
             window.location.href="/screens/registro_completado.html";
         })
-        .catch((error)=>alert("error",error))
-})
+        .catch((error)=>alert("error",error));
+});

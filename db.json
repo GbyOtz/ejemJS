@@ -1,14 +1,17 @@
 {
   "perfil": [
     {
-      "nombre": "Ejemplo Nombre",
-      "email": "xxxxxxx@xxxxxxx.com",
-      "id": 1
-    },
+      "nombre": "gabriela ortiz",
+      "email": "anagabrielaortizv16@gmail.com",
+      "id": "37cc1225-9089-4827-a820-f77889cfefa5"
+    }
+  ],
+  "perfil2": [
     {
-      "nombre": "GABY",
-      "email": "anagabriela16@gmail.com",
-      "id": 2
+      "nombre": "carne",
+      "precio": "30",
+      "descripcion": "de vaca",
+      "id":"1"
     }
   ]
 }
