@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doguito Petshop | Cadastro de cliente</title>
+    <title>Doguito Petshop | Actualizar cliente</title>
     <link rel="icon" href="../assets/img/doguitoadm.svg" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
@@ -40,54 +40,53 @@
     </header>
     <main class="container flex flex--center flex--column">
       <section class="card cadastro">
-        <h1 class="card__title">Nuevo Producto</h1>
+        <h1 class="card__title">Editar</h1>
         <form class="flex flex--column" data-form>
-          <div class="input-container">
-            <input
-              name="nombre"
-              id="nombre"
+            <div class="input-container">
+              <input
+                name="nombre"
+                id="nombre"
+                class="input"
+                type="text"
+                placeholder="nombre"
+                required
+                data-nombre
+              />
+              <label class="input-label" for="nombre">Nombre</label>
+              <span class="input-menssage-error">Este campo es requerido</span>
+            </div>
+            <div class="input-container">
+              <input
+              name="precio"
+              id="precio"
               class="input"
               type="text"
-              placeholder="nombre"
-              required
-              data-nombre
-            />
-            <label class="input-label" for="nombre">Nombre</label>
-            <span class="input-menssage-error">Este campo es requerido</span>
-          </div>
-          <div class="input-container">
-            <input
-            name="precio"
-            id="precio"
-            class="input"
-            type="text"
-            placeholder="Precio"
-            data-precio
-            />
-            <label class="input-label" for="precio">Precio</label>
-            <span class="input-menssage-error">Este campo es requerido</span>
-          </div>
-          <div
-            class="
-              textarea-container textarea-container--invalido
-              register_description-container
-            "
-          >
-            <textarea
-              class="textarea register_description"
-              name="description"
-              id="description"
-              placeholder="Descripcion"
-              data-descripcion
-            ></textarea>
-            <label class="textarea-label" for="description">Descripcion</label>
-            <span class="textarea-menssage-error">Este campo es requeridor</span>
-          </div>
-          <button type="submit" class="button"><a href="./registro_completadoProducto.html" class="button">
-            Registrar producto</a></button>
+              placeholder="Precio"
+              data-precio
+              />
+              <label class="input-label" for="precio">Precio</label>
+              <span class="input-menssage-error">Este campo es requerido</span>
+            </div>
+            <div
+              class="
+                textarea-container textarea-container--invalido
+                register_description-container
+              "
+            >
+              <textarea
+                class="textarea register_description"
+                name="description"
+                id="description"
+                placeholder="Descripcion"
+                data-descripcion
+              ></textarea>
+              <label class="textarea-label" for="description">Descripcion</label>
+              <span class="textarea-menssage-error">Este campo es requeridor</span>
+            </div>
+            <button type="submit" class="button">Editar Producto</button>
         </form>
       </section>
     </main>
-    
+
   </body>
 </html>

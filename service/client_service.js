@@ -17,7 +17,7 @@
 //   return promesa;
 // }
 
-import { uuid } from "uuidv4";
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 const listaClient=()=>{
   return fetch("http://localhost:3000/perfil").then((respuesta)=>respuesta.json());
@@ -29,7 +29,7 @@ const crearClient=(nombre,email)=>{
     headers:{//especificar tipo de archivo que POST envia al servidor que es de tipo json
       "content-Type":"application/json",
     },
-    body:JSON.stringify({nombre,email,id: uuid.v4()})//sirve para transformas el archivo json a string
+    body:JSON.stringify({nombre,email,id: uuidv4()})//sirve para transformas el archivo json a string
   });
 };
 
