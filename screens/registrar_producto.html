@@ -30,7 +30,7 @@
       <nav>
         <ul class="header__list-nav">
           <li class="header__link"><a href="#">Dashboard</a></li>
-          <li class="header__link"><a href="#">Productos</a></li>
+          <li class="header__link"><a href="./lista_producto.html">Productos</a></li>
           <li class="header__link">
             <a href="lista_cliente.html">Clientes </a>
           </li>
@@ -67,27 +67,25 @@
             <label class="input-label" for="precio">Precio</label>
             <span class="input-menssage-error">Este campo es requerido</span>
           </div>
-          <div
-            class="
-              textarea-container textarea-container--invalido
-              register_description-container
-            "
-          >
-            <textarea
-              class="textarea register_description"
-              name="description"
-              id="description"
-              placeholder="Descripcion"
+          <div class="input-container">
+            <input
+              name="descripcion"
+              id="descripcion"
+              class="input"
+              type="text"
+              placeholder="descripcion"
+              required
               data-descripcion
-            ></textarea>
-            <label class="textarea-label" for="description">Descripcion</label>
-            <span class="textarea-menssage-error">Este campo es requeridor</span>
+            />
+            <label class="input-label" for="descripcion">Descripcion</label>
+            <span class="input-menssage-error">Este campo es requerido</span>
           </div>
           <button type="submit" class="button"><a href="./registro_completadoProducto.html" class="button">
             Registrar producto</a></button>
         </form>
       </section>
     </main>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer">//UUID CARGADO CDN</script>
+    <script type="module" src="../controller/registro.producto.controller.js"></script>
   </body>
 </html>

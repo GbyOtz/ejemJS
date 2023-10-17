@@ -8,10 +8,10 @@
   ],
   "perfil2": [
     {
-      "nombre": "carne",
-      "precio": "30",
-      "descripcion": "de vaca",
-      "id":"1"
+      "nombre": "arroz",
+      "precio": "10",
+      "descripcion": "x",
+      "id": "1"
     }
   ]
 }

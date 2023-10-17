@@ -29,7 +29,7 @@ const crearNuevaLinea=(nombre,precio,descripcion,id)=>{
     const btnEliminar= filaTabla.querySelector("button")
     btnEliminar.addEventListener("click",()=>{
         const id=btnEliminar.id;//parametro de boton
-        clientServices.eliminarClient(id).then(respuesta=>{
+        productoServices.eliminarProducto(id).then(respuesta=>{
           alert(respuesta)
         }).catch(error=>alert("error",error))
     });

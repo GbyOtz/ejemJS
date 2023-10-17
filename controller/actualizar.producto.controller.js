@@ -6,7 +6,7 @@ const obtenerInfo =async()=>{
     const url= new URL(window.location);//saca info de la url
     const id = (url.searchParams.get("id"));//obtiene el id
     if (id==null){
-        window.location.href="/screens/error.html"
+        window.location.href="/screens/errorProducto.html"
     }
         
     const nombre = document.querySelector("[data-nombre]");
@@ -16,8 +16,8 @@ const obtenerInfo =async()=>{
     try{
         const perfil2=await productoServices.detalleProducto(id);
         if(perfil2.nombre && perfil2.precio && perfil2.descripcion){
-            nombre.value=perfil.nombre;
-            email.value=perfil.precio;
+            nombre.value=perfil2.nombre;
+            precio.value=perfil2.precio;
             descripcion.value=perfil2.descripcion;
         }
         else{

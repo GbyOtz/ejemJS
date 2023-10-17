@@ -30,7 +30,7 @@
       <nav>
         <ul class="header__list-nav">
           <li class="header__link"><a href="#">Dashboard</a></li>
-          <li class="header__link"><a href="#">Productos</a></li>
+          <li class="header__link"><a href="./lista_producto.html">Productos</a></li>
           <li class="header__link">
             <a href="lista_cliente.html">Clientes </a>
           </li>
@@ -67,26 +67,23 @@
               <label class="input-label" for="precio">Precio</label>
               <span class="input-menssage-error">Este campo es requerido</span>
             </div>
-            <div
-              class="
-                textarea-container textarea-container--invalido
-                register_description-container
-              "
-            >
-              <textarea
-                class="textarea register_description"
-                name="description"
-                id="description"
-                placeholder="Descripcion"
-                data-descripcion
-              ></textarea>
-              <label class="textarea-label" for="description">Descripcion</label>
-              <span class="textarea-menssage-error">Este campo es requeridor</span>
-            </div>
+            <div class="input-container">
+                <input
+                  name="descripcion"
+                  id="descripcion"
+                  class="input"
+                  type="text"
+                  placeholder="descripcion"
+                  required
+                  data-descripcion
+                />
+                <label class="input-label" for="descripcion">Descripcion</label>
+                <span class="input-menssage-error">Este campo es requerido</span>
+              </div>
             <button type="submit" class="button">Editar Producto</button>
         </form>
       </section>
     </main>
-
+    <script type="module" src="../controller/actualizar.producto.controller.js"></script>
   </body>
 </html>
